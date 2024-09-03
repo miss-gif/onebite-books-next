@@ -1,5 +1,6 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import style from "./index.module.css";
+import SearchableLayout from "@/components/searchable-layout";
 
 const Home = () => {
   return (
@@ -11,3 +12,7 @@ const Home = () => {
 };
 
 export default Home;
+
+Home.getLayout = (page: ReactNode) => {
+  return <SearchableLayout>{page}</SearchableLayout>;
+};
